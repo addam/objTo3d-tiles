@@ -261,4 +261,8 @@ console.time('Total');
 obj23dtiles(objPath, outputPath, options)
     .then(() => {
         console.timeEnd('Total');
+    })
+    .catch(function(error) {
+        console.log(error.message || error);
+        process.exit(1);
     });
